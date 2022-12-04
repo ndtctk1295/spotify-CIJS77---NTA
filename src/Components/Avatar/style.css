@@ -1,0 +1,33 @@
+.avatars{
+    margin-top: -10px;
+    padding-left: 20px;
+    display: flex;
+}
+
+.profile-picture{
+    height: 180px;
+    margin-top: 10px;
+    margin-bottom: -15px;
+}
+
+.avatar-list{
+    list-style-type: none;
+    margin-left: 15px;
+    padding: 5px;
+    transition: .3s;
+    color: white;
+}
+
+.avatar-list:hover {
+    background: rgb(105, 105, 170,.1);
+}
+
+.play-icon{
+    opacity: 0;
+}
+
+.avatar-list:hover .play-icon{
+    opacity: 1;
+    color: white;
+}
+
