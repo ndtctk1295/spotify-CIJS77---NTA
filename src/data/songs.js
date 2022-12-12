@@ -1,6 +1,3 @@
-import ReactJkMusicPlayer from "react-jinke-music-player";
-import "react-jinke-music-player/assets/index.css";
-
 const audioLists = [
   {
     name: "MIA",
@@ -19,19 +16,3 @@ const audioLists = [
       "https://res.cloudinary.com/ehsanahmadi/video/upload/v1573550770/Sirvan-Khosravi-Dorost-Nemisham-128_kb8urq.mp3",
   },
 ];
-
-export default function MusicPlayer() {
-  return (
-    <div className="App">
-      <ReactJkMusicPlayer
-        audioLists={audioLists}
-        showMediaSession
-        autoPlay={false}
-        showDownload={false}
-        showReload={false}
-        defaultPosition={{ bottom: "1%", right: "1%" }}
-        mode="full"
-      />
-    </div>
-  );
-}

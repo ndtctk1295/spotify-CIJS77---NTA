@@ -1,11 +1,11 @@
 import React from "react";
 import "./style.css";
 import Avatar from "../../Components/Avatar";
-import SignInSignUpButton from "../Button/Sign in - Sign up Button";
+
 import { useNavigate } from "react-router-dom";
 import Logout from "../Button/Logout Button";
 
-const MainSide = () => {
+const MainSidePrivate = () => {
   const navigate = useNavigate();
   return (
     <div>
@@ -18,12 +18,12 @@ const MainSide = () => {
           marginTop: "2%",
         }}
       >
-        <SignInSignUpButton />
+        <Logout />
       </div>
       <div
         className="avatar"
         onClick={() => {
-          navigate(`/artist`);
+          navigate(`/privateartist`);
         }}
       >
         <h1 className="avatar-title">Artists</h1>
@@ -32,4 +32,4 @@ const MainSide = () => {
     </div>
   );
 };
-export default MainSide;
+export default MainSidePrivate;

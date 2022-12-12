@@ -63,51 +63,53 @@ function Login() {
   //       })
   //     });
   // }
+  const LogInWithGoogle = () => {
+    signInWithGoogle(email, password);
+    setTimeout(navigate("/homepage"), 3000);
+  };
+  const LogInEmailAndPassword = () => {
+    logInWithEmailAndPassword(email, password);
+    setTimeout(navigate("/homepage"), 3000);
+  };
 
   return (
     <div className="form">
       <h1>Login to listen</h1>
-      <form>
-        <div>
-          <label>Enter your username</label>
-          <br />
-          <input
-            type="text"
-            name="username"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="username"
-            placeholder="E-mail Address"
-          />
-        </div>
-        <div>
-          <label>Enter your password</label>
-          <br />
-          <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="password"
-            placeholder="Password"
-          />
-        </div>
-        <div>
-          <button
-            className="login-button"
-            onClick={() => logInWithEmailAndPassword(email, password)}
-          >
-            Log In
-          </button>
 
-          <button
-            className="login-button"
-            onClick={() => signInWithGoogle(email, password)}
-          >
-            Log In With Your Google Account
-          </button>
-        </div>
-      </form>
+      <div>
+        <label>Enter your username</label>
+        <br />
+        <input
+          type="text"
+          name="username"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="username"
+          placeholder="E-mail Address"
+        />
+      </div>
+      <div>
+        <label>Enter your password</label>
+        <br />
+        <input
+          type="password"
+          name="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="password"
+          placeholder="Password"
+        />
+      </div>
+      <div>
+        <button className="login-button" onClick={LogInEmailAndPassword}>
+          Log In
+        </button>
+
+        <button className="login-button" onClick={LogInWithGoogle}>
+          Log In With Your Google Account
+        </button>
+      </div>
+
       {/* <div>{state === true ? <></> : user.errorMessage}</div> */}
     </div>
   );

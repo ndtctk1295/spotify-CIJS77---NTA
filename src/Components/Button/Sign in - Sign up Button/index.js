@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
-import { logout } from "../../Configs/Authentication-Firebase/authentication";
+import { logout } from "../../../Configs/Authentication-Firebase/authentication";
 import { useNavigate } from "react-router-dom";
-import Logout from "./Logout Button";
-const Button = () => {
+import Logout from "../Logout Button";
+const SignInSignUpButton = () => {
   const navigate = useNavigate();
   return (
     <div className="button">
@@ -23,9 +23,8 @@ const Button = () => {
       >
         Log in
       </button>
-      <Logout />
     </div>
   );
 };
 
-export default Button;
+export default SignInSignUpButton;

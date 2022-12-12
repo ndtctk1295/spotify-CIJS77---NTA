@@ -59,16 +59,21 @@ function SignUp() {
   //   });
   //   navigate("/login");
   // };
+  const RegisterWithGoogle = () => {
+    signInWithGoogle();
+    setTimeout(navigate("/homepage"), 3000);
+  };
 
   // function authenticate with firebase
   const register = () => {
     if (!name) alert("Please enter name");
     registerWithEmailAndPassword(name, email, password);
+    setTimeout(navigate("/homepage"), 3000);
   };
-  useEffect(() => {
-    if (loading) return;
-    if (user) navigate.replace("/login");
-  }, [user, loading]);
+  // useEffect(() => {
+  //   if (loading) return;
+  //   if (user) navigate.replace("/homepage");
+  // }, [user, loading]);
   // render
   return (
     <div className="form" style={{ display: "flex" }}>
@@ -138,7 +143,7 @@ function SignUp() {
           onClick={signInWithGoogle}
           value="Sign Up with Google"
         /> */}
-        <button className="signup-button" onClick={signInWithGoogle}>
+        <button className="signup-button" onClick={RegisterWithGoogle}>
           Register with Google
         </button>
       </div>

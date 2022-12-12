@@ -8,6 +8,7 @@ import {
   createUserWithEmailAndPassword,
   sendPasswordResetEmail,
   signOut,
+  signInWithRedirect,
 } from "firebase/auth";
 import {
   getFirestore,
@@ -17,6 +18,8 @@ import {
   where,
   addDoc,
 } from "firebase/firestore";
+import { Navigate, useNavigate } from "react-router-dom";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 

@@ -5,8 +5,9 @@ import Info from "../../Components/Info";
 import Button from "../../Components/Button/Sign in - Sign up Button";
 import MusicPlayer from "../../Components/MusicPlayer";
 import "./style.css";
+import Logout from "../../Components/Button/Logout Button";
 
-const Artist = () => {
+const ArtistPrivateUsers = () => {
   return (
     <div className="home">
       <div className="menu_side">
@@ -23,7 +24,7 @@ const Artist = () => {
             marginBottom: "1%",
           }}
         >
-          <Button />
+          <Logout />
         </div>
         <Info />
       </div>
@@ -31,4 +32,4 @@ const Artist = () => {
     </div>
   );
 };
-export default Artist;
+export default ArtistPrivateUsers;
